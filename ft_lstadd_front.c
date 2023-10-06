@@ -1,5 +1,17 @@
-void    ft_lstadd_front(t_list **lst, t_list *new)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dabae <dabae@student.42perpignan.fr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/06 14:08:01 by dabae             #+#    #+#             */
+/*   Updated: 2023/10/06 14:08:16 by dabae            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    new->next = *lst;
-    *lst = new;
+	new->next = *lst;
+	*lst = new;
 }
