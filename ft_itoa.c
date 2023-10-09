@@ -6,7 +6,7 @@
 /*   By: dabae <dabae@student.42perpignan.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 16:58:54 by dabae             #+#    #+#             */
-/*   Updated: 2023/10/09 16:36:21 by dabae            ###   ########.fr       */
+/*   Updated: 2023/10/09 17:04:24 by darambae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -34,35 +34,36 @@ static	int	ft_count_digit(int n)
 
 char	*ft_itoa(int n)
 {
+	long	i;
 	char	*res;
 	int		count;
-	long int	tmp;
 
-	tmp = n;
-	count = ft_count_digit(tmp);
+	i = n;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	count = ft_count_digit(n);
 	res = (char *)malloc(sizeof(char) * (count + 1));
 	if (!res)
 		return (NULL);
-	if (tmp < 0)
-	{
-		res[0] = '-';
-		tmp *= -1;
-	}
+	if (n < 0)
+		n *= -1;
 	res[count] = '\0';
-	while (count--)
+	while (--count >= 0)
 	{
-		res[count] = tmp % 10 + '0';
-		tmp /= 10;
+		res[count] = n % 10 + '0';
+		n /= 10;
 	}
+	if (i < 0)
+		res[0] = '-';
 	return (res);
 }
 
 #include <stdio.h>
 int	main()
 {
+	long	n = -2147483648;
 	printf("%s\n", ft_itoa(34235));
-	printf("%s\n", ft_itoa(-2147483648));
-	printf("%s\n", ft_itoa(2147483648));
+	printf("%s\n", ft_itoa(n));
 	printf("%s\n", ft_itoa(0));
 	return (0);
 }
