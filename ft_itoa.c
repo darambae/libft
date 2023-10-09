@@ -6,7 +6,7 @@
 /*   By: dabae <dabae@student.42perpignan.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 16:58:54 by dabae             #+#    #+#             */
-/*   Updated: 2023/10/09 17:04:24 by darambae         ###   ########.fr       */
+/*   Updated: 2023/10/09 17:37:53 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -57,7 +57,7 @@ char	*ft_itoa(int n)
 		res[0] = '-';
 	return (res);
 }
-
+/*
 #include <stdio.h>
 int	main()
 {
@@ -67,3 +67,4 @@ int	main()
 	printf("%s\n", ft_itoa(0));
 	return (0);
 }
+*/
