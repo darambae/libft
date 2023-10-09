@@ -9,6 +9,7 @@
 /*   Updated: 2023/10/06 14:11:05 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

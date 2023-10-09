@@ -9,7 +9,7 @@
 /*   Updated: 2023/10/05 09:52:29 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

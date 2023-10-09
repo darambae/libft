@@ -9,8 +9,7 @@
 /*   Updated: 2023/10/03 14:02:24 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <string.h>
+#include "libft.h"
 
 char	*strchr(const char *s, int c)
 {

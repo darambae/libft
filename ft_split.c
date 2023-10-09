@@ -9,7 +9,7 @@
 /*   Updated: 2023/10/05 09:16:55 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
 static	int	ft_count_arr(char const *s, char c)
 {

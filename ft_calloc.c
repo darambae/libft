@@ -9,8 +9,7 @@
 /*   Updated: 2023/10/05 09:25:02 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h" 
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

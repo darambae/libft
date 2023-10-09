@@ -9,7 +9,7 @@
 /*   Updated: 2023/10/05 09:11:30 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
 static	int	ft_count_digit(int n)
 {

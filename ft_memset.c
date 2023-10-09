@@ -6,21 +6,21 @@
 /*   By: dabae <dabae@student.42perpignan.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 12:01:29 by dabae             #+#    #+#             */
-/*   Updated: 2023/10/05 10:14:15 by dabae            ###   ########.fr       */
+/*   Updated: 2023/10/06 16:28:41 by darambae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*tmp;
-	size_t		i;
+	char	*tmp;
 
-	tmp = (unsigned char *)s;
-	i = 0;
-	while (i < n)
+	tmp = (char *)s;
+	while (n)
 	{
-		tmp[i] = (unsigned char)c;
-		i++;
+		*tmp = (unsigned char)c;
+		tmp++;
+		n--;
 	}
 	return (s);
 }
