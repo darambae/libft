@@ -6,12 +6,12 @@
 /*   By: dabae <dabae@student.42perpignan.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 13:45:45 by dabae             #+#    #+#             */
-/*   Updated: 2023/10/09 17:41:21 by dabae            ###   ########.fr       */
+/*   Updated: 2023/10/09 21:18:35 by darambae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
