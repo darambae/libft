@@ -18,15 +18,13 @@ BONUSOBJ = $(BONUSSRC:.c=.o)
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	ar -r $@ $?
-	ranlib $@
+	ar -rcs $@ $^
 
 bonus: $(OBJ) $(BONUSOBJ)
-	ar -r $(NAME) $?
-	ranlib $@
+	ar -rcs $(NAME) $^
 
 .c.o:
-	$(CC) -c $(CFLAGS) $?
+	$(CC) -c $(CFLAGS) $< -o $@
 
 clean :
 	rm -f $(OBJ) $(BONUSOBJ)

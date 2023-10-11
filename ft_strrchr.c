@@ -6,7 +6,7 @@
 /*   By: dabae <dabae@student.42perpignan.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 13:54:49 by dabae             #+#    #+#             */
-/*   Updated: 2023/10/05 09:14:25 by dabae            ###   ########.fr       */
+/*   Updated: 2023/10/11 11:56:04 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)&s[i]);
 		i--;
 	}

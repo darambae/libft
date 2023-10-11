@@ -6,7 +6,7 @@
 /*   By: dabae <dabae@student.42perpignan.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:46:11 by dabae             #+#    #+#             */
-/*   Updated: 2023/10/05 09:26:21 by dabae            ###   ########.fr       */
+/*   Updated: 2023/10/11 11:37:27 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -24,6 +24,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		arr[0] = '\0';
 		return (arr);
 	}
+	if (start + len > ft_strlen(s))
+		len = ft_strlen(s) - start;
 	arr = (char *)malloc(len + 1);
 	if (!arr)
 		return (NULL);

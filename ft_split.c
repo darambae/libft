@@ -6,10 +6,24 @@
 /*   By: dabae <dabae@student.42perpignan.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:14:45 by dabae             #+#    #+#             */
-/*   Updated: 2023/10/05 09:16:55 by dabae            ###   ########.fr       */
+/*   Updated: 2023/10/11 15:37:55 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
+static	char	**ft_free_tab(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
+	return (NULL);
+}
 
 static	int	ft_count_arr(char const *s, char c)
 {
@@ -18,51 +32,55 @@ static	int	ft_count_arr(char const *s, char c)
 
 	i = 0;
 	count = 0;
-	while (s[i])
+	while (s[i] && s)
 	{
-		if (s[i] == c)
+		if (s[i] != c)
+		{
 			count++;
-		i++;
+			while (s[i] != c && s[i])
+				i++;
+		}
+		else
+			i++;
 	}
 	return (count);
 }
 
-static	char	*ft_add_arr(const char *str, int start, int end)
+static	int	ft_size_wd(char const *s, char c, int i)
 {
-	char	*arr;
-	int		i;
+	int	size;
 
-	i = 0;
-	arr = (char *)malloc(sizeof(char) * (end - start + 1));
-	if (!arr)
-		return (NULL);
-	while (start < end)
-		arr[i++] = str[start++];
-	arr[i] = '\0';
-	return (arr);
+	size = 0;
+	while (s[i] != c && s[i])
+	{
+		size++;
+		i++;
+	}
+	return (size);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**arrs;
-	size_t	i;
-	size_t	j;
-	size_t	z;
+	int		i;
+	int		z;
+	int		size;
 
-	arrs = (char **)malloc(sizeof(char *) * (ft_count_arr(s, c) + 2));
+	arrs = (char **)malloc(sizeof(char *) * (ft_count_arr(s, c) + 1));
 	if (!arrs)
 		return (NULL);
 	i = 0;
 	z = -1;
-	while (s[i])
+	while (++z < ft_count_arr(s, c))
 	{
-		j = i;
-		while (s[i] != c && s[i])
+		while (s[i] == c)
 			i++;
-		if (i > j)
-			arrs[z++] = ft_add_arr(s, j, i);
-		i++;
+		size = ft_size_wd(s, c, i);
+		arrs[z] = ft_substr(s, i, size);
+		if (!arrs[z])
+			ft_free_tab(arrs);
+		i += size;
 	}
-	arrs[z] = NULL;
+	arrs[z] = 0;
 	return (arrs);
 }
