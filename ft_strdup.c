@@ -6,7 +6,7 @@
 /*   By: dabae <dabae@student.42perpignan.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 17:32:16 by dabae             #+#    #+#             */
-/*   Updated: 2023/10/09 17:37:40 by dabae            ###   ########.fr       */
+/*   Updated: 2023/10/12 11:34:33 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,21 +16,16 @@ char	*ft_strdup(const char *s)
 	char	*arr;
 	int		i;
 
-	if (!s)
-		return (NULL);
 	arr = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (arr)
-	{
-		i = 0;
-		while (s[i])
-		{
-			arr[i] = s[i];
-			i++;
-		}
-		arr[i] = '\0';
-	}
-	else
+	if (!arr)
 		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		arr[i] = s[i];
+		i++;
+	}
+	arr[i] = '\0';
 	return (arr);
 }
 /*

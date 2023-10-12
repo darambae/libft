@@ -29,7 +29,7 @@ bonus: $(OBJ) $(BONUSOBJ)
 clean :
 	rm -f $(OBJ) $(BONUSOBJ)
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all

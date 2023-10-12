@@ -6,7 +6,7 @@
 /*   By: dabae <dabae@student.42perpignan.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:28:28 by dabae             #+#    #+#             */
-/*   Updated: 2023/10/11 14:05:45 by dabae            ###   ########.fr       */
+/*   Updated: 2023/10/12 10:13:36 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h" 
@@ -20,7 +20,9 @@ int	ft_atoi(const char *nptr)
 	sign = 1;
 	res = 0;
 	i = 0;
-	while (nptr[i] && (nptr[i] >= 9 && nptr[i] <= 13))
+	while (nptr[i] && (nptr[i] == '\t' || nptr[i] == '\n'
+			|| nptr[i] == '\v' || nptr[i] == '\f'
+			|| nptr[i] == '\r' || nptr[i] == ' '))
 		i++;
 	if (nptr[i] == '-' || nptr[i] == '+')
 	{

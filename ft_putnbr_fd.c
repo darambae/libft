@@ -6,32 +6,32 @@
 /*   By: dabae <dabae@student.42perpignan.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:36:12 by dabae             #+#    #+#             */
-/*   Updated: 2023/10/11 15:35:30 by dabae            ###   ########.fr       */
+/*   Updated: 2023/10/12 15:28:21 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	char	res;
+
 	if (n == -2147483648)
 	{
-		ft_putstr_fd("-214748364", fd);
-		ft_putchar_fd('8', fd);
+		ft_putnbr_fd(-214748364, fd);
+		write(fd, "8", 1);
 		return ;
 	}
-	if (n < 0)
+	else if (n < 0)
 	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(-n, fd);
+		write(fd, "-", 1);
+		n *= -1;
 	}
-	else if (n > 9)
+	if (n > 9)
 	{
 		ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd((n % 10) + '0', fd);
+		res = (n % 10) + '0';
 	}
 	else
-	{
-		ft_putchar_fd(n + '0', fd);
-		return ;
-	}
+		res = n + '0';
+	write(fd, &res, 1);
 }
