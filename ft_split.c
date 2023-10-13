@@ -6,7 +6,7 @@
 /*   By: dabae <dabae@student.42perpignan.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:14:45 by dabae             #+#    #+#             */
-/*   Updated: 2023/10/11 15:37:55 by dabae            ###   ########.fr       */
+/*   Updated: 2023/10/13 10:19:48 by dabae            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -15,6 +15,8 @@ static	char	**ft_free_tab(char **tab)
 {
 	int	i;
 
+	if (!tab)
+		return (NULL);
 	i = 0;
 	while (tab[i])
 	{
@@ -78,7 +80,7 @@ char	**ft_split(char const *s, char c)
 		size = ft_size_wd(s, c, i);
 		arrs[z] = ft_substr(s, i, size);
 		if (!arrs[z])
-			ft_free_tab(arrs);
+			return (ft_free_tab(arrs));
 		i += size;
 	}
 	arrs[z] = 0;
