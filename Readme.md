@@ -6,7 +6,7 @@
 - [Libft](#libft)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
-  - [Features](#features)
+  - [Feature](#feature)
   - [Installation](#installation)
   - [Functions List](#functions-list)
     - [English](#english)
@@ -20,11 +20,11 @@ Libft is a library that recreates a number of standard C library functions, as w
 
 Libft est une bibliothèque qui recrée un certain nombre de fonctions de la bibliothèque standard C, ainsi que des fonctions utilitaires supplémentaires souvent utilisées dans des projets plus importants. Ce projet est une partie fondamentale du programme de l'école 42, visant à développer une compréhension plus approfondie de la programmation en C et à améliorer la réutilisabilité du code.
 
-Libft는 표준 C 라이브러리 함수뿐만 아니라 더 큰 프로젝트에서 자주 사용되는 추가 유틸리티 함수를 재구현하는 라이브러리입니다. 이 프로젝트는 C 프로그래밍에 대한 더 깊은 이해를 개발하고 코드 재사용성을 향상시키기 위해 42 학교 커리큘럼의 기본적인 부분입니다.
+Libft는 표준 C 라이브러리 함수뿐만 아니라 더 큰 프로젝트에서 자주 사용되는 추가 유틸리티 함수를 재구현하는 라이브러리입니다. 이 프로젝트는 C 프로그래밍에 대한 더 깊은 이해를 돕고 코드 재사용성을 높이는 것을 목표로 합니다.
 
 ---
 
-## Features
+## Feature
 
 - Custom implementations of several C standard library functions.
 - Additional functions for string manipulation, memory management, and linked lists.
