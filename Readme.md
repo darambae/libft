@@ -42,8 +42,8 @@ Libft는 표준 C 라이브러리 함수뿐만 아니라 더 큰 프로젝트에
 
 ## Installation
 
-    git clone https://github.com/yourusername/libft.git
-    cd libfth
+    git clone https://github.com/darambae/libft.git
+    cd libft
     make
 ---
 
