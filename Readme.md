@@ -9,9 +9,11 @@
   - [Features](#features)
   - [Installation](#installation)
   - [Functions List](#functions-list)
+    - [English](#english)
+    - [Français](#français)
+    - [한국어](#한국어)
   - [Project Structure](#project-structure)
-  - [└── README.md](#-readmemd)
-
+  
 ## Introduction
 
 Libft is a library that recreates a number of standard C library functions, as well as additional utility functions that are often used in larger projects. This project is a fundamental part of the 42 school curriculum, aimed at developing a deeper understanding of C programming and enhancing code reusability.
@@ -27,11 +29,11 @@ Libft는 표준 C 라이브러리 함수뿐만 아니라 더 큰 프로젝트에
 - Custom implementations of several C standard library functions.
 - Additional functions for string manipulation, memory management, and linked lists.
 - Provides a foundation for more complex projects.
-
+<br><br>
 - Implémentations personnalisées de plusieurs fonctions de la bibliothèque standard C.
 - Fonctions supplémentaires pour la manipulation de chaînes, la gestion de la mémoire et les listes chaînées.
 - Fournit une base pour des projets plus complexes.
-
+<br><br>
 - 여러 C 표준 라이브러리 함수의 맞춤 구현.
 - 문자열 조작, 메모리 관리 및 연결 리스트를 위한 추가 함수.
 - 더 복잡한 프로젝트를 위한 기초 제공.
@@ -40,43 +42,14 @@ Libft는 표준 C 라이브러리 함수뿐만 아니라 더 큰 프로젝트에
 
 ## Installation
 
-1. Clone the repository:
-    ```bash
     git clone https://github.com/yourusername/libft.git
-    cd libft
-    ```
-2. Compile the library:
-    ```bash
+    cd libfth
     make
-    ```
-3. Include `libft.a` in your projects.
-
-1. Clonez le dépôt :
-    ```bash
-    git clone https://github.com/yourusername/libft.git
-    cd libft
-    ```
-2. Compilez la bibliothèque :
-    ```bash
-    make
-    ```
-3. Incluez `libft.a` dans vos projets.
-
-1. 저장소를 복제하세요:
-    ```bash
-    git clone https://github.com/yourusername/libft.git
-    cd libft
-    ```
-2. 라이브러리를 컴파일하세요:
-    ```bash
-    make
-    ```
-3. `libft.a`를 프로젝트에 포함하세요.
-
 ---
 
 ## Functions List
 
+### English
 - `ft_isalpha` - Checks for alphabetic character.
 - `ft_isdigit` - Checks for a digit (0 through 9).
 - `ft_isalnum` - Checks for an alphanumeric character.
@@ -122,6 +95,7 @@ Libft는 표준 C 라이브러리 함수뿐만 아니라 더 큰 프로젝트에
      - `ft_lstiter` - Iterates over a list and applies a function to each element.
      - `ft_lstmap` - Iterates over a list and applies a function, returning a new list.
 
+### Français
 - `ft_isalpha` - Vérifie si un caractère est alphabétique.
 - `ft_isdigit` - Vérifie si un caractère est un chiffre (0 à 9).
 - `ft_isalnum` - Vérifie si un caractère est alphanumérique.
@@ -167,10 +141,11 @@ Libft는 표준 C 라이브러리 함수뿐만 아니라 더 큰 프로젝트에
      - `ft_lstiter` - Itère sur une liste et applique une fonction à chaque élément.
      - `ft_lstmap` - Itère sur une liste, applique une fonction et renvoie une nouvelle liste.
 
+### 한국어
 - `ft_isalpha` - 알파벳 문자인지 확인.
 - `ft_isdigit` - 숫자인지 확인 (0-9).
 - `ft_isalnum` - 영숫자인지 확인.
-- `ft_isascii` - ASCII 문자인지 확인.
+- `ft_isascii` - ASCII 문자인지 확인.어
 - `ft_isprint` - 출력 가능한 문자인지 확인.
 - `ft_strlen` - 문자열 길이를 계산.
 - `ft_memset` - 메모리를 지정된 값으로 채움.
@@ -215,49 +190,46 @@ Libft는 표준 C 라이브러리 함수뿐만 아니라 더 큰 프로젝트에
 ---
 
 ## Project Structure
-
+```
 libft/
 │
-├── includes/
-│   └── libft.h
-│
-├── srcs/
-│   ├── ft_isalpha.c
-│   ├── ft_isdigit.c
-│   ├── ft_isalnum.c
-│   ├── ft_isascii.c
-│   ├── ft_isprint.c
-│   ├── ft_strlen.c
-│   ├── ft_memset.c
-│   ├── ft_bzero.c
-│   ├── ft_memcpy.c
-│   ├── ft_memmove.c
-│   ├── ft_strlcpy.c
-│   ├── ft_strlcat.c
-│   ├── ft_tolower.c
-│   ├── ft_toupper.c
-│   ├── ft_strchr.c
-│   ├── ft_strrchr.c
-│   ├── ft_strncmp.c
-│   ├── ft_memchr.c
-│   ├── ft_memcmp.c
-│   ├── ft_strnstr.c
-│   ├── ft_atoi.c
-│   ├── ft_calloc.c
-│   ├── ft_strdup.c
-│   ├── ft_substr.c
-│   ├── ft_strjoin.c
-│   ├── ft_strtrim.c
-│   ├── ft_split.c
-│   ├── ft_itoa.c
-│   ├── ft_strmapi.c
-│   ├── ft_striteri.c
-│   ├── ft_putchar_fd.c
-│   ├── ft_putstr_fd.c
-│   ├── ft_putendl_fd.c
-│   ├── ft_putnbr_fd.c
-│   └── ft_lst*.c (linked list functions)
-│
+├── ft_atoi.c
+├── ft_bzero.c
+├── ft_calloc.c
+├── ft_isalnum.c
+├── ft_isalpha.c
+├── ft_isascii.c
+├── ft_isdigit.c
+├── ft_isprint.c
+├── ft_itoa.c
+├── ft_lst*.c (linked list functions)
+├── ft_memchr.c
+├── ft_memcmp.c
+├── ft_memcpy.c
+├── ft_memmove.c
+├── ft_memset.c
+├── ft_putchar_fd.c
+├── ft_putendl_fd.c
+├── ft_putnbr_fd.c
+├── ft_putstr_fd.c
+├── ft_split.c
+├── ft_strchr.c
+├── ft_strdup.c
+├── ft_striteri.c
+├── ft_strjoin.c
+├── ft_strlcat.c
+├── ft_strlcpy.c
+├── ft_strlen.c
+├── ft_strmapi.c
+├── ft_strncmp.c
+├── ft_strnstr.c
+├── ft_strrchr.c
+├── ft_strtrim.c
+├── ft_substr.c
+├── ft_tolower.c
+├── ft_toupper.c
+├── libft.h
 ├── Makefile
 └── README.md
+```
 ---
