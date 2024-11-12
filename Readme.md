@@ -145,7 +145,7 @@ Libft는 표준 C 라이브러리 함수뿐만 아니라 더 큰 프로젝트에
 - `ft_isalpha` - 알파벳 문자인지 확인.
 - `ft_isdigit` - 숫자인지 확인 (0-9).
 - `ft_isalnum` - 영숫자인지 확인.
-- `ft_isascii` - ASCII 문자인지 확인.어
+- `ft_isascii` - ASCII 문자인지 확인.
 - `ft_isprint` - 출력 가능한 문자인지 확인.
 - `ft_strlen` - 문자열 길이를 계산.
 - `ft_memset` - 메모리를 지정된 값으로 채움.
